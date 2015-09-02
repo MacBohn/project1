@@ -36,7 +36,11 @@
 
       <div class="cover-container">
 
-
+        <% if notice.present? %>
+        <div class="notice">
+          <%= notice %>
+        </div>
+        <% end %>
 
         <div class="inner cover">
           <h1 class="cover-heading">Scores & Stats </h1>

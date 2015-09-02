@@ -12,7 +12,7 @@ class RegistrationsController < ApplicationController
     @user = User.create(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to root_path, notice: "User was successfully created"
+      redirect_to root_path, notice: "User was successfully Signed Up Correctly"
     else
       redirect_to sign_up_path, notice: "All fields are required with correct information"
     end

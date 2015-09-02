@@ -6,13 +6,23 @@
     <div class="inner">
       <nav>
         <ul class="nav masthead-nav">
+          <% if current_user %>
+          <li class="active"> <%= link_to "Home", root_path %></li>
+          <li><a href="/contacts">Contact</a></li>
+          <li><a href="/authentications">Sign Out</a></li>
+          <li> <%= current_user.first_name %>  <%= current_user.last_name %>  </li>
+          <% else %>
           <li class="active"> <%= link_to "Home", root_path %></li>
           <li><a href="/contacts">Contact</a></li>
           <li><a href="/registrations">Sign Up</a></li>
+          <% end %>
         </ul>
       </nav>
     </div>
   </div>
+
+
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
