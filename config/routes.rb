@@ -6,7 +6,8 @@ Rails.application.routes.draw do
    root 'pages#index'
 
    get '/contacts' => 'contacts#index'
-   get '/registrations' => 'registrations#index'
+   get '/registrations' => 'registrations#new'
+   post '/registrations' => 'registrations#create'
 
 
   # Example of regular route:
