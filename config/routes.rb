@@ -8,7 +8,8 @@ Rails.application.routes.draw do
    get '/contacts' => 'contacts#index'
    get '/registrations' => 'registrations#new'
    post '/registrations' => 'registrations#create'
-   get '/authentications' => 'authentications#destroy', as: :signout
+   get '/sign-out' => 'authentications#destroy'
+   get '/sign-in' => 'authentications#create'
 
 
   # Example of regular route:
