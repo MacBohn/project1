@@ -1,0 +1,22 @@
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="inner cover">
+        <h1 class="cover-heading">Sign Up Now </h1>
+        <h2class="lead">Sign In and if you already have account if you do not then <%= link_to "Sign Up", registrations_path   %> here !</h2>
+<%= form_for(@user, url: signin_path) do |f| %>
+<h2>Sign In</h2>
+<%= f.label :email %>
+<br>
+<%= f.email_field :email, class:"textbox" %>
+<br><br>
+<%= f.label :password %>
+<br>
+<%= f.password_field :password  ,class:"textbox" %>
+<br><br>
+<%= f.submit "Submit", class: "css_button" %>
+<% end %>
+      </div>
+    </div>
+  </div>
+</div>

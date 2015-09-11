@@ -1,6 +1,5 @@
 class RegistrationsController < ApplicationController
 
-
   def index
   end
 
@@ -14,7 +13,7 @@ class RegistrationsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "User was successfully Signed Up Correctly"
     else
-      redirect_to sign_up_path, notice: "All fields are required with correct information"
+      redirect_to registrations_path, notice: "All fields are required with correct information"
     end
   end
 
