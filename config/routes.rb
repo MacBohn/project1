@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get '/sign-out' => 'authentications#destroy'
   get '/sign-in' => 'authentications#new', as: :signin
   post '/sign-in' => 'sessions#create'
-  
+  get '/news' => 'news#index'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
